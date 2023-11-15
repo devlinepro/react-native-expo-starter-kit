@@ -54,8 +54,7 @@ messages.
 
 ### Project structure
 
-`assets` - static assets
-
+`assets` - static assets\
 `src` - app sources\
 `src/app` - non-UI app part\
 `src/app/api` - APIs\
@@ -64,20 +63,15 @@ messages.
 `src/app/middlewares` - redux toolkit middlewares\
 `src/app/slices` - redux toolkit slices \
 `src/app/store.ts` - add your slices, reducers, middlewares here \
-`src/app/theme.ts` - global theme variables like colors, sizes, component styles
-
+`src/app/theme.ts` - global theme variables like colors, sizes, component styles\
 `src/components` - common app components\
-`src/components/ui` - common reusable small UI components
-
+`src/components/ui` - common reusable small UI components\
 `src/core` - project-independent part of code that can be used in other projects\
 `src/core/api` - base HTTP queries\
 `src/core/hooks` - common hooks for logic reuse\
-`src/core/store.ts` - redux store configuration
-
-`src/hooks` - common app hooks for logic reuse
-
-`src/screens` - one folder per screen
-
+`src/core/store.ts` - redux store configuration\
+`src/hooks` - common app hooks for logic reuse\
+`src/screens` - one folder per screen\
 `src/app.ts` - entrypoint\
 `src/navigation.ts` - screens definitions
 

@@ -14,7 +14,7 @@ export const HomeScreen = () => {
 	}, [makeError]);
 
 	const openDocs = () => {
-		Linking.openURL("https://github.com/devlinepro/react-native-starter-kit");
+		Linking.openURL("https://github.com/devlinepro/react-native-expo-starter-kit");
 	};
 
 	return (
