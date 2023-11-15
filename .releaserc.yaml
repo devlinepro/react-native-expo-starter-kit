@@ -1,0 +1,26 @@
+branches:
+  - main
+plugins:
+  - '@semantic-release/commit-analyzer'
+  - - '@semantic-release/release-notes-generator'
+    - writerOpts:
+        mainTemplate: |
+          {{> header}}
+          
+          ## Changes made
+          
+          {{#each commitGroups}}
+  
+          {{#if title}}
+          ### {{title}}
+          
+          {{/if}}
+          {{#each commits}}
+          {{> commit root=@root}}
+          {{/each}}
+          
+          {{/each}}
+
+          {{> footer}}        
+
+  - - '@semantic-release/github'
