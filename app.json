@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "react-native-starter-kit",
+    "name": "StarterKit",
     "slug": "react-native-starter-kit",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,8 +17,7 @@
     "ios": {
       "bundleIdentifier": "com.company.app",
       "supportsTablet": true,
-      "infoPlist": {
-      },
+      "infoPlist": {},
       "config": {
         "usesNonExemptEncryption": false
       }
@@ -33,11 +32,6 @@
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
-    },
-    "extra": {
-      "eas": {
-        "projectId": ""
-      }
     }
   }
 }

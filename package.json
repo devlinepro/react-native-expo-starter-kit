@@ -9,7 +9,7 @@
   },
   "engineStrict": true,
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky install && cp .env.example .env",
     "start": "expo start",
     "start-tunnel": "expo start --tunnel",
     "android": "expo start --android",

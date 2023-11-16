@@ -14,7 +14,7 @@ export const catsApi = createApi({
 			}
 		>({
 			query: (params) => ({
-				url: `https://api.thecatapi.com/v1/images/search${params?.makeError ? "not-found" : ""}?limit=10`,
+				url: `/v1/images/search${params?.makeError ? "not-found" : ""}?limit=10`,
 				method: "GET",
 			}),
 		}),

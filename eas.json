@@ -6,7 +6,7 @@
   "build": {
     "base": {
       "env": {
-        "EXPO_PUBLIC_BASE_URL": ""
+        "EXPO_PUBLIC_BASE_URL": "https://api.thecatapi.com"
       }
     },
     "development": {
@@ -30,9 +30,9 @@
         "releaseStatus": "draft"
       },
       "ios": {
-        "appleId": "",
-        "ascAppId": "",
-        "appleTeamId": ""
+        "appleId": "<your-apple-id>",
+        "ascAppId": "<your-app-id>",
+        "appleTeamId": "<your-apple-team-id>"
       }
     }
   }

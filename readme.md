@@ -77,37 +77,61 @@ messages.
 
 ## Getting started
 
+### Quick start
+
 1. Press the **Use this template** button and create new repository or clone the repository in your console.
-2. Create a project on [expo.dev](https://expo.dev)
-3. Create an application in App Store Connect;
-4. Create an application in Google Play Console;
-5. Update `app.json` file with these values:
-    - `expo.name` &mdash; your app name;
-    - `expo.slug` &mdash; copy from the created expo project;
+2. Install dependencies with `npm i`
+3. Start application and start coding. 
+
+```bash
+npm start
+```
+
+After installing dependencies you'll see `.env` file in the root of project. Feel free to change it.
+
+### The next steps
+
+After quick start you may want to create an Expo project and set up a development workflow.
+
+#### 1. Link to an Expo project
+
+1. Mare sure you have installed `eas-cli` and logged in:
+   - `npm i -g eas-cli`
+   - `eas login`
+2. Update `app.json` file with correct values:
+   - `expo.name` &mdash; your app's name;
+   - `expo.slug` &mdash; app's slug ;  
+3. Initialize new Expo project and follow instructions in your console:
+   - `eas init`
+
+Now your project is linked to the Expo project. 
+
+#### 2. Prepare for automated build & submission
+
+1. Create an application in App Store Connect; 
+2. Create an application in Google Play Console;
+3. Update `app.json` file with these values:
     - `expo.ios.bundleIdentifier` &mdash; change it like in App Store Connect;
     - `expo.android.package` &mdash; change it like in Google Play;
-    - `expo.extra.eas.projectId` &mdash; copy from the created expo project;
-6. Update `eas.json` file these values:
+4. Update `eas.json` file these values:
     - `build.base.env.EXPO_PUBLIC_BASE_URL` &mdash; this endpoint will be used for RTK base query;
-    - `submit.production.ios` &mdash; fill these values for automated submissions;
-7. Update `package.json` file &mdash; set name of your project;
-8. Create access token for robot users in Expo console;
-9. Create `EXPO_TOKEN` secret in project settings on GitHub;
-10. Make first Apple build & submit manually from your console. After that Expo will generate and save all necessary
-    certificates and everything will be ready for automated workflow;
-    - `npm i -g eas-cli`
-    - `eas login`
-    - `npm run expo-build-ios`
-    - `npm run expo-submit-ios`
-11. Make first Android build. Follow these instructions:
-    - Create service account and save json file with keys;
-    - Create GitHub secret in your repository `GOOGLE_SERVICE_ACCOUNT_KEY` with base64-encoded contents of the json file;
-    - Set privacy policy URL https://github.com/expo/fyi/blob/main/missing-privacy-policy.md
-    - Create first expo build manually:
-      - `npm run expo-build-android`
-    - Download `.aab` file from the Expo console and manually make first submission https://github.com/expo/fyi/blob/main/first-android-submission.md
-12. Create branches: `production/ios`, `production/android`, `production/all`
-13. Check GitHub actions and you should see started workflows. 
+    - `submit.production.ios` &mdash; change these values for automated submissions;
+5. Update `package.json` file &mdash; set name of your project;
+6. Create access token for robot users in the Expo console;
+7. Create `EXPO_TOKEN` secret in project settings on GitHub;
+8. Make first Apple build & submit manually from your console. After that Expo will generate and save all necessary
+   certificates and everything will be ready for automated workflow;
+   - `npm run expo-build-ios`
+   - `npm run expo-submit-ios`
+9. Make first Android build. Follow these instructions:
+   - Create service account and save json file with keys;
+   - Create GitHub secret in your repository `GOOGLE_SERVICE_ACCOUNT_KEY` with base64-encoded contents of the json file;
+   - Set privacy policy URL https://github.com/expo/fyi/blob/main/missing-privacy-policy.md
+   - Create first expo build manually:
+     - `npm run expo-build-android`
+   - Download `.aab` file from the Expo console and manually make first submission https://github.com/expo/fyi/blob/main/first-android-submission.md
+10. Create branches: `production/ios`, `production/android`, `production/all`
+11. Check GitHub actions and you should see started workflows. 
 
 ## Roadmap
 
